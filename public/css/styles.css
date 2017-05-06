@@ -1,0 +1,22 @@
+body{
+    background-image: url("../images/background.JPG");
+    background-repeat: no-repeat;
+    font-family: "Orbitron", sans-serif;
+    text-align: center;
+    font-size: 50px;
+    color: #ffffff;
+}
+
+header{
+    font-size: 50px;
+    color: #ffffff;
+    text-align: center;
+    margin: 25px;
+    padding: 0;
+}
+.jumbotron{
+    margin: 25px;
+    margin-top: 100px;
+    background-color: transparent;
+    text-align: center;
+}

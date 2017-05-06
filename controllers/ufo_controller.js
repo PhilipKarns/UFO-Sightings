@@ -11,4 +11,13 @@ router.get('/', function (req, res) {
 	});
 });
 
+router.get("/:shape", function(req,res) {
+    models.sightings.findAll({
+    where: {
+        shape: req.params.shape
+    }
+}).then(function(results){
+    res.json(results)
+});
+});
 module.exports = router;
