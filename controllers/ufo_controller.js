@@ -3,7 +3,7 @@ var express = require('express');
 var router = express.Router();
 var models = require('../models');
 
-router.get('/', function (req, res) {
+router.get("/", function (req, res) {
 	models.sightings.findAll({}).then(function(sightings) {
 		var hbsObject = {sightings : sightings};
 		console.log(hbsObject);
@@ -11,7 +11,7 @@ router.get('/', function (req, res) {
 	});
 });
 
-router.get("/:shape", function(req,res) {
+router.get("/shape/:shape", function(req,res) {
     models.sightings.findAll({
     where: {
         shape: req.params.shape
@@ -21,7 +21,7 @@ router.get("/:shape", function(req,res) {
 	});
 });
 
-router.get('/:date', function(req,res){
+router.get("/date/:date", function(req,res){
     models.sightings.findAll({ 
     where: {
         Date: req.params.date
@@ -31,7 +31,7 @@ router.get('/:date', function(req,res){
 	});
 });
 
-router.get(":/state", function(req,res){
+router.get("/state/:state", function(req,res){
     models.sightings.findAll({
         where: {
             state: req.params.state 
@@ -41,7 +41,7 @@ router.get(":/state", function(req,res){
 	});
 });
 
-router.get(':/city', function(req,res){
+router.get("/city/:city", function(req,res){
     models.sightings.findAll({
         where: {
             city: req.params.city
