@@ -16,8 +16,39 @@ router.get("/:shape", function(req,res) {
     where: {
         shape: req.params.shape
     }
-}).then(function(results){
+	}).then(function(results){
+	    res.json(results)
+	});
+});
+
+router.get('/:date', function(req,res){
+    models.sightings.findAll({ 
+    where: {
+        Date: req.params.date
+    }
+    }).then(function(results){
     res.json(results)
+	});
 });
+
+router.get(":/state", function(req,res){
+    models.sightings.findAll({
+        where: {
+            state: req.params.state 
+        }
+    }).then(function(results){
+    res.json(results)
+	});
 });
+
+router.get(':/city', function(req,res){
+    models.sightings.findAll({
+        where: {
+            city: req.params.city
+        }
+	}).then(function(results){
+	    res.json(results)
+	});
+});
+
 module.exports = router;
