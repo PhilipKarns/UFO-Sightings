@@ -1,0 +1,19 @@
+
+<div>
+	<div>
+		<h2>UFO Sightings</h2>
+		<ul>
+			{{#each sightings}}
+				<li>
+						{{this.Date}}
+						{{this.City}}
+						{{this.State}}
+						{{this.Shape}}
+						{{this.Duration}}
+						{{this.Summary}}
+			    </li>
+				    <br>			    
+			{{/each}}
+		</ul>
+	</div>
+</div>
