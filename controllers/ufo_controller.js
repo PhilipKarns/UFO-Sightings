@@ -28,6 +28,7 @@ router.get("/date/:date", function(req,res){
     }
     }).then(function(results){
     res.json(results)
+    console.log(results);
 	});
 });
 
