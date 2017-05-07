@@ -62,7 +62,8 @@ router.post("/", function (req, res) {
       Duration: req.body.duration,
       Summary: req.body.summary
     }).then(function(dbSighting) {
-        res.json(dbSighting);
+        //res.json(dbSighting);
+        res.redirect("/");
     });//dbsighting
 })//post
 module.exports = router;
