@@ -52,4 +52,17 @@ router.get("/city/:city", function(req,res){
 	});
 });
 
+router.post("/", function (req, res) {
+    console.log(req.body);
+    models.sightings.create({
+      Date: req.body.date,
+      City: req.body.city,
+      State: req.body.state,
+      Shape: req.body.shape,
+      Duration: req.body.duration,
+      Summary: req.body.summary
+    }).then(function(dbSighting) {
+        res.json(dbSighting);
+    });//dbsighting
+})//post
 module.exports = router;
