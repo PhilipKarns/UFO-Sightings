@@ -12,7 +12,7 @@ var port = process.env.PORT || 8080;
 var models = require("./models");
 
 // Serve static content for the app from the "public" directory in the application directory.
-//app.use(express.static(process.cwd() + "/public"));
+app.use(express.static(process.cwd() + "/public"));
 
 // USED THIS THE FIRST TIME. REMOVE?Parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));

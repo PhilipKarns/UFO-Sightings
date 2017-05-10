@@ -1,5 +1,11 @@
 module.exports = function (sequelize, DataTypes){
 	var sightings = sequelize.define("sightings", {
+		id: {
+			type: DataTypes.INTEGER,
+			allowNull: false,
+			primaryKey: true,
+			autoIncrement: true
+		},
 		Date: {
 			type: DataTypes.TEXT,
 			allowNull:true
