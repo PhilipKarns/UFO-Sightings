@@ -46,7 +46,7 @@ router.get("/state/:state", function(req,res){
             state: req.params.state 
         }
     }).then(function(results){
-    res.json(results)
+    res.json(results);
 	});
 });
 
@@ -56,7 +56,7 @@ router.get("/city/:city", function(req,res){
             city: req.params.city
         }
 	}).then(function(results){
-	    res.json(results)
+	    res.json(results);
 	});
 });
 
@@ -74,4 +74,17 @@ router.post("/", function (req, res) {
         res.redirect("/");
     });//dbsighting
 })//post
+
+
+router.get("/add", function (req, res) {
+
+        res.render('addSighting');
+    
+});
+
+// //HTML add route loads the add.html page, where users can enter new books to the db
+//   router.get("/add", function(req, res) {
+//     res.sendFile(path.join(__dirname, "../views/addSighting.handlebars"));
+//   });
+
 module.exports = router;
