@@ -1,4 +1,22 @@
-// When user hits the search-btn
+// When user hits the Date search-btn
+$("#date-search-btn").on("click", function(event) {
+  event.preventDefault();
+
+  // Save the book they typed into the book-search input
+  var dateSearched = $("#date-search").val().trim();
+
+  // Make an AJAX get request to our api, including the user's book in the url
+  $.get("/api/date/" + dateSearched, function(data) {
+
+    console.log(data);
+    // Call our renderBooks function to add our books to the page
+    renderBooks(data);
+
+  });
+
+});
+
+// When user hits the City search-btn
 $("#city-search-btn").on("click", function(event) {
   event.preventDefault();
 
@@ -16,6 +34,41 @@ $("#city-search-btn").on("click", function(event) {
 
 });
 
+// When user hits the State search-btn
+$("#state-search-btn").on("click", function(event) {
+  event.preventDefault();
+
+  // Save the book they typed into the book-search input
+  var stateSearched = $("#state-search").val().trim();
+
+  // Make an AJAX get request to our api, including the user's book in the url
+  $.get("/api/state/" + stateSearched, function(data) {
+
+    console.log(data);
+    // Call our renderBooks function to add our books to the page
+    renderBooks(data);
+
+  });
+
+});
+
+// When user hits the Shape search-btn
+$("#shape-search-btn").on("click", function(event) {
+  event.preventDefault();
+
+  // Save the book they typed into the book-search input
+  var shapeSearched = $("#shape-search").val().trim();
+
+  // Make an AJAX get request to our api, including the user's book in the url
+  $.get("/api/shape/" + shapeSearched, function(data) {
+
+    console.log(data);
+    // Call our renderBooks function to add our books to the page
+    renderBooks(data);
+
+  });
+
+});
 
 function renderBooks(data) {
   if (data.length !== 0) {

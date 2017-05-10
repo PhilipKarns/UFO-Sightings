@@ -14,7 +14,7 @@ router.get("/api/all", function (req, res) {
     });
 });
 
-router.get("/shape/:shape", function(req,res) {
+router.get("/api/shape/:shape", function(req,res) {
     models.sightings.findAll({
     where: {
         shape: req.params.shape
@@ -24,10 +24,10 @@ router.get("/shape/:shape", function(req,res) {
 	});
 });
 
-router.get("/date/:date", function(req,res){
+router.get("/api/date/:date", function(req,res){
     models.sightings.findAll({ 
     where: {
-        Date: req.params.date
+        date: req.params.date
     }
     }).then(function(results){
     res.json(results);
@@ -35,7 +35,7 @@ router.get("/date/:date", function(req,res){
 	});
 });
 
-router.get("/state/:state", function(req,res){
+router.get("/api/state/:state", function(req,res){
     models.sightings.findAll({
         where: {
             state: req.params.state 
