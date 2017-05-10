@@ -6,7 +6,7 @@ $("#city-search-btn").on("click", function(event) {
   var citySearched = $("#city-search").val().trim();
 
   // Make an AJAX get request to our api, including the user's book in the url
-  $.get("/api/" + citySearched, function(data) {
+  $.get("/api/city/" + citySearched, function(data) {
 
     console.log(data);
     // Call our renderBooks function to add our books to the page
@@ -27,12 +27,13 @@ function renderBooks(data) {
 
       var div = $("<div>");
 
-      div.append("<p>Date: " + data[i].date + "</p>");
-      div.append("<p>City: " + data[i].city + "</p>");
-      div.append("<p>State: " + data[i].state + "</p>");
-      div.append("<p>Shape: " + data[i].shape + "</p>");
-      div.append("<p>Duration: " + data[i].duration + "</p>");
-      div.append("<p>Summary: " + data[i].summary + "</p>");
+      div.append("<p>Date: " + data[i].Date + "</p>");
+      div.append("<p>City: " + data[i].City + "</p>");
+      div.append("<p>State: " + data[i].State + "</p>");
+      div.append("<p>Shape: " + data[i].Shape + "</p>");
+      div.append("<p>Duration: " + data[i].Duration + "</p>");
+      div.append("<p>Summary: " + data[i].Summary + "</p>");
+      div.append("<hr>")
       
 
       $("#stats").append(div);

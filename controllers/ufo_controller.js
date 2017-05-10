@@ -45,7 +45,7 @@ router.get("/state/:state", function(req,res){
 	});
 });
 
-router.get("/city/:city", function(req,res){
+router.get("/api/city/:city", function(req,res){
     models.sightings.findAll({
         where: {
             city: req.params.city
