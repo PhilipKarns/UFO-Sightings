@@ -4,14 +4,9 @@ var router = express.Router();
 var models = require('../models');
 var path = require("path");
 
-  // // index route loads view.html
-  // router.get("/", function(req, res) {
-  //   //res.sendFile(path.join(__dirname, "../views/layouts/main.handlebars"));
-  //   res.render('index');
-  // });
 
 
-router.get("/all", function (req, res) {
+router.get("/api/all", function (req, res) {
     models.sightings.findAll({}).then(function(sightings) {
         var hbsObject = {sightings : sightings};
         console.log(hbsObject);
@@ -60,6 +55,7 @@ router.get("/city/:city", function(req,res){
 	});
 });
 
+//post route for adding new sighting
 router.post("/", function (req, res) {
     console.log(req.body);
     models.sightings.create({
@@ -75,8 +71,8 @@ router.post("/", function (req, res) {
     });//dbsighting
 })//post
 
-
-router.get("/add", function (req, res) {
+//get route to display addSighting handlebars page where POST route info shows
+router.get("/api/add", function (req, res) {
 
         res.render('addSighting');
     
