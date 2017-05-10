@@ -27,7 +27,7 @@ router.get("/date/:date", function(req,res){
         Date: req.params.date
     }
     }).then(function(results){
-    res.json(results)
+    res.json(results);
     console.log(results);
 	});
 });
