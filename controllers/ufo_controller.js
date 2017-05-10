@@ -2,13 +2,21 @@
 var express = require('express');
 var router = express.Router();
 var models = require('../models');
+var path = require("path");
 
-router.get("/", function (req, res) {
-	models.sightings.findAll({}).then(function(sightings) {
-		var hbsObject = {sightings : sightings};
-		console.log(hbsObject);
-		res.render('index', hbsObject);
-	});
+  // // index route loads view.html
+  // router.get("/", function(req, res) {
+  //   //res.sendFile(path.join(__dirname, "../views/layouts/main.handlebars"));
+  //   res.render('index');
+  // });
+
+
+router.get("/all", function (req, res) {
+    models.sightings.findAll({}).then(function(sightings) {
+        var hbsObject = {sightings : sightings};
+        console.log(hbsObject);
+        res.render('allSightings', hbsObject);
+    });
 });
 
 router.get("/shape/:shape", function(req,res) {

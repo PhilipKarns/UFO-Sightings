@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "newcastle22",
-    "database": "ufo",
+    "password": "Atlanta@10",
+    "database": "ufo_sightings_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "port": 3306
