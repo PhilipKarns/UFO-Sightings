@@ -78,6 +78,12 @@ router.get("/api/add", function (req, res) {
     
 });
 
+//get route to display the citySearch handlebars page when the button is clicked on the home page
+router.get("/api/city", function (req, res) {
+
+        res.render('citySearch');
+    
+});
 // //HTML add route loads the add.html page, where users can enter new books to the db
 //   router.get("/add", function(req, res) {
 //     res.sendFile(path.join(__dirname, "../views/addSighting.handlebars"));
