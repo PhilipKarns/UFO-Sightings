@@ -33,41 +33,6 @@
 
 </head>
 <body>
-
-<!--     <div class="row">
-  <div class="col-lg-6">
-    <div class="input-group">
-      <div class="input-group-btn">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
-        <ul class="dropdown-menu">
-          <li><a href="/api/city">City</a></li>
-          <li><a href="/api/state">State</a></li>
-          <li><a href="/api/shape">Shape</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="/api/all">Date</a></li>
-        </ul>
-      </div><!-- /btn-group -->
-      <input type="text" class="form-control" aria-label="...">
-    </div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-  <div class="col-lg-6">
-    <div class="input-group">
-      <input type="text" class="form-control" aria-label="...">
-      <div class="input-group-btn">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
-        <ul class="dropdown-menu dropdown-menu-right">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#">Separated link</a></li>
-        </ul>
-      </div><!-- /btn-group -->
-    </div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-</div><!-- /.row --> -->
-    
-
     <div class="container">
 
         <header>
@@ -81,36 +46,37 @@
             <p>You can search our database for UFO activity all around the world.</p>
 
             <a href="/api/all" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-th-list"></span> All Sightings</a>
-            <a href="/api/add" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-plus"></span> Add New Sighting</a>
-            <a href="/api/city" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-plus"></span> Search by City</a>
-
-            <h1>Search our out-of-this world database</h1>
-
-            <input type="text" class="form-control" id="" placeholder="Search our out-of-this world database">
-            <hr>
-            <p><a class="btn btn-danger btn-lg" href="#" role="button"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Engage</a></p> 
+            <a href="#add" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-plus"></span> Add New Sighting</a>
+            <a href="#date" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-plus"></span> Search by Date</a>
+            <a href="#city" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-plus"></span> Search by City</a>
+            <a href="#state" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-plus"></span> Search by State</a>
+            <a href="#shape" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-plus"></span> Search by Shape</a> 
         </div>
     </div>
 
     <div class="container">
 
+
             <!--SEARCH BY DATE-->
-            <div class="panel panel-default">
+            <div class="panel panel-default" id="date">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><strong>Search by Date (MM/DD/YYYY)</strong></h3>
+                <a href="/">Back to Top</a>
+                    <h3 class="panel-title"><strong>Search by Date (MM-DD-YYYY)</strong></h3>
                 </div>
                 <div class="panel-body">
                     <input type="text" id="date-search" class="form-control">
                     <br>
                     <div class="text-right">
                         <button class="btn btn-primary btn-md" id="date-search-btn"><span class="glyphicon glyphicon-search"></span> Engage</button>
+                        <a href="#results">Go to results</a>
                     </div>
                 </div>
             </div>
 
             <!--SEARCH BY CITY-->
-            <div class="panel panel-default">
+            <div class="panel panel-default" id="city">
                 <div class="panel-heading">
+                <a href="/">Back to Top</a>
                     <h3 class="panel-title"><strong>Search by City</strong></h3>
                 </div>
                 <div class="panel-body">
@@ -118,13 +84,15 @@
                     <br>
                     <div class="text-right">
                         <button class="btn btn-primary btn-md" id="city-search-btn"><span class="glyphicon glyphicon-search"></span> Engage</button>
+                        <a href="#results">Go to results</a>
                     </div>
                 </div>
             </div>
 
             <!--SEARCH BY STATE-->
-            <div class="panel panel-default">
+            <div class="panel panel-default" id="state">
                 <div class="panel-heading">
+                <a href="/">Back to Top</a>
                     <h3 class="panel-title"><strong>Search by State</strong></h3>
                 </div>
                 <div class="panel-body">
@@ -132,13 +100,15 @@
                     <br>
                     <div class="text-right">
                         <button class="btn btn-primary btn-md" id="state-search-btn"><span class="glyphicon glyphicon-search"></span> Engage</button>
+                        <a href="#results">Go to results</a>
                     </div>
                 </div>
             </div>
 
             <!--SEARCH BY SHAPE-->
-            <div class="panel panel-default">
+            <div class="panel panel-default" id="shape">
                 <div class="panel-heading">
+                <a href="/">Back to Top</a>
                     <h3 class="panel-title"><strong>Search by Shape</strong></h3>
                 </div>
                 <div class="panel-body">
@@ -146,12 +116,14 @@
                     <br>
                     <div class="text-right">
                         <button class="btn btn-primary btn-md" id="shape-search-btn"><span class="glyphicon glyphicon-search"></span> Engage</button>
+                        <a href="#results">Go to results</a>
                     </div>
                 </div>
             </div>
 
-            <div class="panel panel-default">
+            <div class="panel panel-default" id="results">
                 <div class="panel-heading">
+                <a href="/">Back to Top</a>
                     <h3 class="panel-title"><strong>Sighting Search Results</strong></h3>
                 </div>
                 <div class="panel-body">
@@ -169,6 +141,50 @@
                     <hr>
                 </div>
             </div>
+
+            <div class="panel panel-default">
+            <div class="panel-heading" id="add">
+                    <a href="/">Back to Top</a>
+                    <h3 class="panel-title"><strong>Add a Sighting</strong></h3>
+            </div>
+             <div class="panel-body">
+                    <form class="create-form" action="/" method="POST">
+             
+                      <div class="form-group">
+                        <label for="date">Date:</label>
+                        <input type="text" id="date" name="date">
+                      </div>
+             
+                      <div class="form-group">
+                        <label for="city">City:</label>
+                        <input type="text" id="city" name="city">
+                      </div>
+             
+                      <div class="form-group">
+                        <label for="state">State:</label>
+                        <input type="text" id="state" name="state">
+                      </div>
+             
+                      <div class="form-group">
+                        <label for="shape">Shape:</label>
+                        <input type="text" id="shape" name="shape">
+                      </div>
+             
+                      <div class="form-group">
+                        <label for="duration">Duration:</label>
+                        <input type="text" id="duration" name="duration">
+                      </div>
+             
+                      <div class="form-group">
+                        <label for="summary">Summary:</label>
+                        <textarea id="summary" name="summary" rows="2" cols="40"></textarea>
+                      </div>
+             
+                      <button type="submit">Add Sighting</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>   
 
 <script src="content/js/jquery.min.js"></script>

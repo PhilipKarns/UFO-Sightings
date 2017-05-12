@@ -1,3 +1,4 @@
+
 // Dependencies
 var express = require('express');
 var router = express.Router();
@@ -21,9 +22,9 @@ router.get("/api/shape/:shape", function(req,res) {
     where: {
         shape: req.params.shape
     }
-	}).then(function(results){
-	    res.json(results)
-	});
+    }).then(function(results){
+        res.json(results)
+    });
 });
 
 router.get("/api/date/:date", function(req,res){
@@ -34,7 +35,7 @@ router.get("/api/date/:date", function(req,res){
     }).then(function(results){
     res.json(results);
     console.log(results);
-	});
+    });
 });
 
 router.get("/api/state/:state", function(req,res){
@@ -44,7 +45,7 @@ router.get("/api/state/:state", function(req,res){
         }
     }).then(function(results){
     res.json(results);
-	});
+    });
 });
 
 router.get("/api/city/:city", function(req,res){
@@ -52,9 +53,9 @@ router.get("/api/city/:city", function(req,res){
         where: {
             city: req.params.city
         }
-	}).then(function(results){
-	    res.json(results);
-	});
+    }).then(function(results){
+        res.json(results);
+    });
 });
 
 // router.get("/api/city/:city", function (req, res) {

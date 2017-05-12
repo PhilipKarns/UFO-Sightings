@@ -14,7 +14,7 @@
 
 // });
 // $('.dropdown-toggle').on("click", function(event) {
-// 	event.preventDefault();
+//  event.preventDefault();
 
 //   // Save the book they typed into the book-search input
 //   var citySearched = $(".form-control").val().trim();
