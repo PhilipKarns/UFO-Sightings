@@ -4,7 +4,9 @@ var router = express.Router();
 var models = require('../models');
 var path = require("path");
 
-
+router.get("/", function (req, res) {
+        res.render('index');
+});
 
 router.get("/api/all", function (req, res) {
     models.sightings.findAll({}).then(function(sightings) {
@@ -54,6 +56,18 @@ router.get("/api/city/:city", function(req,res){
 	    res.json(results);
 	});
 });
+
+// router.get("/api/city/:city", function (req, res) {
+//     models.sightings.findAll({
+//         where: {
+//             city: req.params.city
+//         }
+//     }).then(function(sightings) {
+//         var hbsObject = {sightings : sightings};
+//         console.log(hbsObject);
+//         res.render('citySearch', hbsObject);
+//     });
+// });
 
 //post route for adding new sighting
 router.post("/", function (req, res) {

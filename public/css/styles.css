@@ -19,3 +19,13 @@ header{
     background-color: transparent;
     text-align: center;
 }
+
+.row {
+    height: 10px;
+    color: black;
+}
+
+#stats {
+    font-size: 25px;
+    color: black;
+}
